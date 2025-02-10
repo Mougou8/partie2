@@ -26,17 +26,20 @@
 
 
 function formulaireChamps($nomInput){
+    
        echo'<form action="#"
         method="post">'; //Début du formulaire
  //Parcourir le tableau et créer un champs de texte pour chaque élément
     foreach ($nomInput as $nom) {
-        echo '<label>'. $nom .' </label><br>';//Affichage label
-        echo '<input type="text" name="'. strtolower($nom) .'"required><br><br>';//Champs de texte
+        //Affichage label
+        echo '<label>'. $nom .' </label><br>';
+        //Champs de texte , nom e  miniscule, required est une instruction utilisée
+        //   pour iinclure un fichier externe.
+        echo '<input type="text" name="'. strtolower($nom) .'"required><br><br>';
     }
         // echo '<input type="submit" value="Envoyer">';//Boutoun de soumission
 
         echo '<form>';//Fin de formulaire
-                   
 }
  //Tableau contenant les noms des champs 
 
