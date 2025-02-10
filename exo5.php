@@ -6,7 +6,7 @@
 
     Exemple : 
     $nomImput = ["Nom", "Prénom", "ville"];
-    afficherInmput($nomsInput);
+    afficherInput($nomsInput);
 
     AFFICHAGE :
     NOM
@@ -16,31 +16,34 @@
 
 <?php
 
-$nomInput = ["Nom"=> "Prénom"];
 
-foreach ($nom as $prénom => $nom){
-    echo "Le nom $nom a pour prénom : $prénom ";
-}
 
-   echo formulaireChamps($nomInput)
+// foreach ($nom as $prénom => $nom){
+//     echo "Le nom $nom a pour prénom : $prénom ";
+// }
+
+//    echo formulaireChamps($nomInput)
 
 
 function formulaireChamps($nomInput){
-    $result = "<table border = 1>
-                     <thead>
-                            <tr>
-                                <th>$Nom</th>
-                                 <th>$Prénom</th>
-                                 <th>$Ville</th>
-                            </tr>
-                    
-    
-                     </thead>
-                     <tbody>";
-foreach ($nom as $prénom => $ville){
-    $result = ."<tr>."ucfirst
-}                    
-    
-    
-    </table>"
+       echo'<form action="#"
+        method="post">'; //Début du formulaire
+ //Parcourir le tableau et créer un champs de texte pour chaque élément
+    foreach ($nomInput as $nom) {
+        echo '<label>'. $nom .' </label><br>';//Affichage label
+        echo '<input type="text" name="'. strtolower($nom) .'"required><br><br>';//Champs de texte
+    }
+        // echo '<input type="submit" value="Envoyer">';//Boutoun de soumission
+
+        echo '<form>';//Fin de formulaire
+                   
 }
+ //Tableau contenant les noms des champs 
+
+$nomInput = [
+    "Nom", "Prénom","Ville"
+];
+formulaireChamps($nomInput);
+    
+
+
