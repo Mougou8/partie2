@@ -15,7 +15,7 @@
 
 <?php
 //options = choisir un élément dans le paramètre
-function Alimenterlistederoulante ($nom, $options){
+function alimenterlistederoulante ($nom, $options){
     echo "<select name='$nom'>"; // Début de la liste déroulante(pour créer = select )
     foreach ($options as $option) {
         
@@ -28,5 +28,5 @@ function Alimenterlistederoulante ($nom, $options){
 $elements = ["Monsieur", "Madame", "Mademoiselle"];
 
 //Appel de la fonction pour afficher la liste déroulante
-AlimenterListederoulante("civilite", $elements);
+alimenterListederoulante("civilite", $elements);
 
