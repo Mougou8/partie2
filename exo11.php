@@ -42,4 +42,4 @@ function formaterDateFr($date){
     
 }
    // Test de la fonction(Affichage)
-    echo formatter ("2018-02-23"); // Affichera : vendredi 23 février 2018
+    echo formaterDateFr ("2018-02-23"); // Affichera : vendredi 23 février 2018
